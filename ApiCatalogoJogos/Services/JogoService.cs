@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace ApiCatalogoJogos.Services
 {
-    public class JogoService : IJogoService
+        public class JogoService : IJogoService
     {
         private readonly IJogoRepository _jogoRepository;
 

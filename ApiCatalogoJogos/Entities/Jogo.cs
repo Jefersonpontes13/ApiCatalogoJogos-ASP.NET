@@ -10,3 +10,4 @@ namespace ApiCatalogoJogos.Entities
         public double Preco { get; set; }
     }
 }
+

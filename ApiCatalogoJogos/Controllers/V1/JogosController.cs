@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ApiCatalogoJogos.Controllers.V1
 {
-    [Route("api/V1/[controller]")]
+    [Route("api/v1/[controller]")]
     [ApiController]
     public class JogosController : ControllerBase
     {
@@ -75,7 +75,7 @@ namespace ApiCatalogoJogos.Controllers.V1
 
                 return Ok(jogo);
             }
-            catch (JogoJaCadastradoException ex)
+            catch (JogoJaCadastradoException)
             {
                 return UnprocessableEntity("Já existe um jogo com este nome para esta produtora");
             }
@@ -97,7 +97,7 @@ namespace ApiCatalogoJogos.Controllers.V1
 
                 return Ok();
             }
-            catch (JogoNaoCadastradoException ex)
+            catch (JogoNaoCadastradoException)
             {
                 return NotFound("Não existe este jogo");
             }
@@ -119,7 +119,7 @@ namespace ApiCatalogoJogos.Controllers.V1
 
                 return Ok();
             }
-            catch (JogoNaoCadastradoException ex)
+            catch (JogoNaoCadastradoException)
             {
                 return NotFound("Não existe este jogo");
             }
@@ -140,9 +140,9 @@ namespace ApiCatalogoJogos.Controllers.V1
 
                 return Ok();
             }
-            catch (JogoNaoCadastradoException ex)
+            catch (JogoNaoCadastradoException)
             {
-                return NotFound("Não existe este jogo");
+                return NotFound("Não existe este jogo" );
             }
         }
 
